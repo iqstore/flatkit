@@ -1,0 +1,19 @@
+# Project
+bower_components/
+dist/
+libs/
+node_modules/
+
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+.idea/
+*.ipr
+*.iws
+*.iml
+out/
