@@ -1,7 +1,7 @@
 {
 	"app" : {
       "name": "Flatkit",
-      "version": "1.1.3",
+      "version": "1.2.0",
       "color": {
         "primary":      "#0cc2aa",
         "accent":       "#a88add",

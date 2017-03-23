@@ -1,8 +1,8 @@
 (function ($) {
 	"use strict";
   	
-	uiLoad.load('../libs/jquery/screenfull/dist/screenfull.min.js');
-	$(document).on('click', '[ui-fullscreen]', function (e) {
+	uiLoad.load(MODULE_CONFIG.screenfull);
+	$(document).on('click', '[ui-fullscreen], [data-ui-fullscreen]', function (e) {
 		e.preventDefault();
 		if (screenfull.enabled) {
 		  screenfull.toggle();

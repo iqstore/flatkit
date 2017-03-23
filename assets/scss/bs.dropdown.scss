@@ -78,6 +78,10 @@
   background-color: $border-color;
 }
 
+.flex-row > .nav-item > .dropdown-menu{
+  position: absolute !important;
+}
+
 .dropdown-menu-scale{
   display: block;
   opacity: 0;
@@ -87,7 +91,11 @@
   pointer-events: none;
 }
 
-.open > .dropdown-menu-scale{
+.open > .dropdown-menu{
+  display: block;
+}
+
+.show > .dropdown-menu-scale{
   opacity: 1;
   @include scale(1);
   pointer-events: auto;

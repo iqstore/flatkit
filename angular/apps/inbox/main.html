@@ -7,7 +7,7 @@
       </div>
       <div class="hidden-xs-down m-t" id="inbox-menu">
         <div class="nav-active-{{app.setting.theme.primary}}">
-          <div class="nav nav-pills nav-sm">
+          <div class="nav nav-pills nav-sm flex-column">
               <a class="nav-link" ui-sref="app.inbox.list({fold:fold.filter})" ng-repeat="fold in folds" ui-sref-active="active">
                 {{fold.name}}
               </a>
@@ -15,7 +15,7 @@
         </div>
         <div class="m-y">Labels</div>
         <div class="nav-active-white">
-          <ul class="nav nav-pills nav-stacked nav-sm">
+          <ul class="nav nav-pills nav-stacked nav-sm flex-column">
             <li class="nav-item" ng-repeat="label in labels" ui-sref-active="active">
               <a class="nav-link" ui-sref="app.inbox.list({fold:label.filter})">
                 <i class="fa m-r-sm fa-circle text-muted" color="{{label.color}}" label-color ></i>

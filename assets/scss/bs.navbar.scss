@@ -1,8 +1,5 @@
 .navbar{
-	border: none;
-	margin: 0;
-	padding: 0 1rem;
-	flex-shrink: 0;
+	background: inherit;
 	min-height: $navbar-height;
 	.up{
 		margin: 0 -0.6em;
@@ -12,43 +9,29 @@
 	}
 }
 
-.navbar-item{
-	margin-right: 1rem;
-	margin-bottom: 0;
-}
-
-.navbar-nav > .nav-link,
-.navbar-nav > .nav-item > .nav-link,
-.navbar-item,
-.navbar-brand{
-	padding: 0;
-	line-height: $navbar-height;
-	white-space: nowrap;
-}
-
 .navbar-md {
-	.navbar-nav > .nav-link,
-	.navbar-nav > .nav-item > .nav-link,
-	.navbar-item,
-	.navbar-brand{
-		line-height: $navbar-md-height;
-	}
 	min-height: $navbar-md-height;
+	padding-top: ($navbar-md-height - $navbar-height)/2 + 0.5;
+	padding-bottom: ($navbar-md-height - $navbar-height)/2 + 0.5;
+	.navbar{
+		min-height: auto;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 }
 
 .navbar-sm {
-	.navbar-nav > .nav-link,
-	.navbar-nav > .nav-item > .nav-link,
-	.navbar-item,
-	.navbar-brand{
-		line-height: $navbar-sm-height;
-	}
 	min-height: $navbar-sm-height;
+	padding-top: ($navbar-height - $navbar-sm-height)/2;
+	padding-bottom: ($navbar-height - $navbar-sm-height)/2;
+	.navbar{
+		min-height: auto;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 }
 
 .navbar-brand{
-	padding: 0;
-	font-size: 20px;
 	font-weight: bold;
 	&:hover{
 		text-decoration: none;
@@ -84,34 +67,33 @@
 	}
 }
 
-.collapsing,
-.collapse.in{
-	.navbar &{
-		clear:left;
-		padding-bottom: 1rem;
-	}
-	.navbar-nav{
-		float: none !important;
-	}
-	.navbar-nav:not(.navbar-nav-inline){
-		.nav-item{
-			float: none;
-			margin:0;
-		}
-		.nav-link{
-			display: block;
-			line-height: 2 !important;
-		}
-	}
-	.navbar-form{
-		margin: 0 !important;
-		padding: 0.5rem 0;
-		float: none !important;
-	}
+.navbar-collapse.collapsing,
+.navbar-collapse.collapse.show{
+	background: inherit;
+	left: 0;
+	top: 100%;
+	max-height: 100vh;
+	overflow: auto;
+	width: 100%;
 	.nav-active-border{
 		border-color: transparent;
 	}
-	.dropdown-menu-scale{
-		display: none;
-	}
+}
+
+.navbar-toggleable {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    &#{$infix} {
+      @include media-breakpoint-down($breakpoint) {
+        .navbar-collapse.collapsing,
+		.navbar-collapse.collapse.show{
+			padding: 0 1rem 4rem 1rem;
+			position: absolute;
+			z-index: 1040;
+		}
+      }
+    }
+  }
 }

@@ -1,3 +1,11 @@
+## Release v1.2.0
+
+### Features:
+	
+ - Update Bootstrap 4 to alpha.6
+   NOTE: This update need change some css class names on some tag elements. 
+
+
 ## Release v1.1.3
 
 ### Features:

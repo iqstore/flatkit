@@ -125,7 +125,8 @@
 }
 
 .box .dataTables_wrapper > .row {
-  margin: 0
+  margin: 0;
+  width: 100%;
 }
 
 .box .dataTables_wrapper > .row > .col-sm-12 {
@@ -133,6 +134,13 @@
 }
 .dataTables_wrapper.form-inline .form-control{
   width: auto;
+}
+div.dataTables_length label,
+div.dataTables_filter label{
+  display:inline-block;
+}
+div.dataTables_paginate ul.pagination{
+  display:inline-block;
 }
 .footable-odd{
   background-color: $table-striped-color !important;
@@ -167,4 +175,29 @@
   list-style: none;
   border: 1px dashed #fff;
   min-height: 40px;
+}
+
+.abn-tree{
+    -webkit-box-orient: vertical!important;
+    -webkit-box-direction: normal!important;
+    -webkit-flex-direction: column!important;
+    -ms-flex-direction: column!important;
+    flex-direction: column!important;
+}
+
+.input-group > .ui-select-bootstrap.dropdown,
+div.input-group > .select2-container{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1%;
+}
+.input-group > .ui-select-bootstrap.dropdown .form-control,
+div.input-group > .select2-container > .selection{
+    width: 100%;
 }

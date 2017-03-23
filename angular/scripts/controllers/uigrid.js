@@ -5,8 +5,8 @@
     angular
         .module('app')
         .controller('UiGridCtrl', UiGridCtrl);
-        UiGridCtrl.$inject = ['$scope', 'uiGridConstants'];
-        function UiGridCtrl($scope, uiGridConstants) {
+        UiGridCtrl.$inject = ['$scope', 'uiGridConstants', '$timeout'];
+        function UiGridCtrl($scope, uiGridConstants, $timeout) {
           var vm = $scope;
           vm.gridOptionsSimple = {
             rowHeight: 36,
@@ -279,5 +279,42 @@
               }
             ]
           };
+
+          vm.gridOptions = {
+            enableSorting: true
+          };
+         
+          var colCount = 500;
+          var rowCount = 500;
+         
+          vm.gridOptions.columnDefs = [];
+          $timeout( function() {
+            for (var colIndex = 0; colIndex < colCount; colIndex++) {
+              vm.gridOptions.columnDefs.push({
+                name: 'col' + colIndex,
+                width: Math.floor(Math.random() * (120 - 50 + 1)) + 50
+              });
+            }
+          });
+         
+          var data = [];
+         
+          $timeout( function() {
+            for (var rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+              var row = {};
+         
+              for (var colIndex = 0; colIndex < colCount; colIndex++) {
+                row['col' + colIndex] = 'r' + rowIndex + 'c' + colIndex;
+              }
+         
+              data.push(row);
+            }
+          });
+         
+          vm.gridOptions.data = data;
+         
+          vm.$on("destroy", function(){
+            $timeout.cancel();
+          });
         }
 })();

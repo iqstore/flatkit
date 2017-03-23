@@ -6,7 +6,7 @@
         <div class="row-row">
           <div class="row-body scrollable hover">
             <div class="row-inner">
-              <div class="nav nav-pills nav-stacked m-t-sm">
+              <div class="nav nav-pills nav-stacked flex-column m-t-sm">
                 <a class="nav-link" ng-class="{'_600': (filter == '')}" ng-click="selectGroup({name:''})">ALL Contacts</a>
                 <a ng-repeat="item in groups" ng-dblclick="editItem(item)" class="nav-link hover-anchor" ng-class="{'_600': item.selected}" ng-click="selectGroup(item)">
                   <span ng-click='deleteGroup(item)' class="pull-right text-muted hover-action"><i class="fa fa-times"></i></span>
@@ -75,7 +75,7 @@
           <div class="row-body">
             <div class="row-inner">
               <div class="padding">
-                <div class="row-col h-auto m-b-lg">
+                <div class="row h-auto m-b-lg">
                   <div class="col-sm-3">
                     <div class="avatar w-64 inline">
                       <img ng-src="{{item.avatar}}" ng-show="item.avatar">

@@ -45,10 +45,6 @@ input[type="text"].ui-grid-filter-input{
   top: 5px;
 }
 
-.ui-grid-canvas,
-.ui-grid-header-canvas{
-	width: 100% !important;
-}
 .ui-grid-menu .ui-grid-menu-inner{
 	color: #333;
 }

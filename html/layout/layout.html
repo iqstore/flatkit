@@ -2,18 +2,18 @@
 layout: base.html
 ---
   <!-- aside -->
-  <div id="aside" class="app-aside modal fade nav-dropdown">
+  <div id="aside" class="app-aside modal nav-dropdown">
   	<!-- fluid app aside -->
-    <div class="left navside dark dk" layout="column">
+    <div class="left navside dark dk" data-layout="column">
   	  <div class="navbar no-radius">
         {{>navbar.brand}}
       </div>
-      <div flex class="hide-scroll">
+      <div class="hide-scroll" data-flex>
           <nav class="scroll nav-light">
             {{>nav.html}}
           </nav>
       </div>
-      <div flex-no-shrink class="b-t">
+      <div class="b-t">
         {{>aside.top}}
       </div>
     </div>

@@ -335,21 +335,15 @@
           </ul>
           <h4>Progressbar</h4>
         </div>
-        <div class="list-group">
-          <div class="list-group-item">
-            <uib-progressbar value="35" class="progress-xxs m-t-sm"></uib-progressbar>
-            <uib-progressbar value="55" class="progress-xs" type="info"></uib-progressbar>
-            <uib-progressbar class="progress-striped progress-xs" value="22" type="success"></uib-progressbar>
-            <uib-progressbar class="progress-striped active progress-xs m-b-sm" max="200" value="90" type="warning"></uib-progressbar>
-          </div>
-          <div class="list-group-item">
-            <uib-progressbar max="max" value="dynamic" type="info" class="progress-sm m-t-sm"><span style="white-space:nowrap;">{{dynamic}} / {{max}}</span></uib-progressbar>            
-            <uib-progressbar animate="false" value="dynamic" type="success"><b>{{dynamic}}%</b></uib-progressbar>
-            <uib-progressbar class="progress-striped active m-b-sm" value="dynamic" type="{{type}}">{{type}} <i ng-show="showWarning">!!! Watch out !!!</i></uib-progressbar>
-          </div>
-          <div class="list-group-item">
-            <uib-progress><uib-bar ng-repeat="bar in stacked track by $index" value="bar.value" type="{{bar.type}}"><span ng-hide="bar.value < 5">{{bar.value}}%</span></uib-bar></uib-progress>
-          </div>
+        <div class="box-body">
+            <uib-progressbar value="35" class="progress-xxs mb-2"></uib-progressbar>
+            <uib-progressbar value="55" class="progress-xs mb-2" type="info"></uib-progressbar>
+            <uib-progressbar class="progress-striped progress-xs mb-2" value="22" type="success"></uib-progressbar>
+            <uib-progressbar class="progress-striped active progress-xs mb-2" max="200" value="90" type="warning"></uib-progressbar>
+            <uib-progressbar max="max" value="dynamic" type="info" class="progress-sm mb-2"><span style="white-space:nowrap;">{{dynamic}} / {{max}}</span></uib-progressbar>            
+            <uib-progressbar animate="false" value="dynamic" type="success" class="mb-2"><b>{{dynamic}}%</b></uib-progressbar>
+            <uib-progressbar class="progress-striped active  mb-2" value="dynamic" type="{{type}}">{{type}} <i ng-show="showWarning">!!! Watch out !!!</i></uib-progressbar>
+            <uib-progress class=" mb-2"><uib-bar ng-repeat="bar in stacked track by $index" value="bar.value" type="{{bar.type}}"><span ng-hide="bar.value < 5">{{bar.value}}%</span></uib-bar></uib-progress>
         </div>
       </div>
       <!-- / progressbar -->

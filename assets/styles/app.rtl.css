@@ -50,19 +50,13 @@
   margin-left: inherit; }
 
 @media (min-width: 992px) {
-  .folded.nav-expand:hover .nav > li > a,
-  .folded.nav-expand:focus .nav > li > a,
-  .folded.nav-expand.active .nav > li > a {
+  .folded.nav-expand:hover .nav > li > a, .folded.nav-expand:focus .nav > li > a, .folded.nav-expand.active .nav > li > a {
     text-align: right; }
-    .folded.nav-expand:hover .nav > li > a .nav-icon,
-    .folded.nav-expand:focus .nav > li > a .nav-icon,
-    .folded.nav-expand.active .nav > li > a .nav-icon {
+    .folded.nav-expand:hover .nav > li > a .nav-icon, .folded.nav-expand:focus .nav > li > a .nav-icon, .folded.nav-expand.active .nav > li > a .nav-icon {
       float: right;
       margin-left: 16px;
       margin-right: 0; }
-  .folded.nav-expand:hover .navbar,
-  .folded.nav-expand:focus .navbar,
-  .folded.nav-expand.active .navbar {
+  .folded.nav-expand:hover .navbar, .folded.nav-expand:focus .navbar, .folded.nav-expand.active .navbar {
     text-align: right; }
   .folded.nav-dropdown .nav > li > ul {
     left: auto;

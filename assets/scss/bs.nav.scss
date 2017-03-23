@@ -11,6 +11,13 @@
   position: relative;
 }
 
+.flex-row{
+  .nav-link{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 .nav-md{
   .nav-link{
     padding: 0.5rem 1rem;

@@ -41,7 +41,7 @@
                     <td><strong>{{ item.file.name }}</strong></td>
                     <td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
                     <td ng-show="uploader.isHTML5">
-                        <div class="progress progress-sm m-a-0 m-t-xs">
+                        <div class="progress progress-sm m-0 m-t-xs">
                             <div class="progress-bar info" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
                         </div>
                     </td>
@@ -67,8 +67,9 @@
         <div>
           <div>
             <p>Queue progress:</p>
-            <progress class="progress progress-striped progress-success" value="{{uploader.progress}}" max="100">
-            </progress>
+            <div class="progress mb-2">
+                <div class="progress-bar progress-bar-striped success" style="width: {{uploader.progress}}%" max="100"></div>
+            </div>
           </div>
           <button type="button" class="btn btn-addon btn-info" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
             <i class="fa fa-cloud-upload"></i> Upload all

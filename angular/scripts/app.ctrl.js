@@ -21,7 +21,7 @@
         // config
         vm.app = {
           name: 'Flatkit',
-          version: '1.1.3',
+          version: '1.2.0',
           // for chart colors
           color: {
             'primary':      '#0cc2aa',

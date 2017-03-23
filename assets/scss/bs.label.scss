@@ -18,8 +18,9 @@
 
 .label{
   &.up{
-    position: relative;
-    top: -10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
     min-width: 4px;
     min-height: 4px;
     display: inline-block;

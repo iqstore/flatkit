@@ -50,9 +50,6 @@
 .hide {
   display: none !important;
 }
-.show {
-  display: block !important;
-}
 
 .pointer{
   cursor: pointer;
@@ -71,6 +68,10 @@
 .no-shadow{
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
+}
+
+.no-wrap{
+  white-space: nowrap;
 }
 
 @include media-breakpoint-down(sm) {

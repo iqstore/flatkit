@@ -73,7 +73,8 @@
     animation: rotateOut 0.5s;
   }
 
-  &.in{
+  &.in,
+  &.show{
     .fade-right-big{
       -webkit-animation: fadeInRightBig 0.5s;
       animation: fadeInRightBig 0.5s;

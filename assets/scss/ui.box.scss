@@ -44,8 +44,11 @@
 
 .box-tool{
 	position: absolute;
-	right: 16px;
-	top: 14px
+	right: 10px;
+	top: 10px;
+	.nav-link{
+		padding: .25rem .35rem;
+	}
 }
 
 .box-shadow {

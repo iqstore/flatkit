@@ -1,6 +1,6 @@
 {
   "name": "Flatkit",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Bootstrap 4 Web App UI Kit with AngularJS",
   "scripts": {
     "start": "node node_modules/http-server/bin/http-server -o"
